@@ -1,29 +1,36 @@
 import './App.css';
+import React from "react";
+import FaqSection from "./Components/FaqSection";
+import FeaturesSection from "./Components/FeaturesSection";
+import FooterSection from "./Components/FooterSection";
+import HeroSection from "./Components/HeroSection";
+import NavbarSection from "./Components/NavbarSection";
+import ServicesSection from "./Components/ServicesSection";
+import Box from "@mui/material";
+import ThemeProvider from "./ThemeProvider";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Box
+        component="main"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          width: "100%",
+          alignItems: "center",
+          bgcolor: "background.default",
+        }}
+      >
+        <NavbarSection />
+        <HeroSection />
+        <FeaturesSection />
+        <ServicesSection />
+        <FaqSection />
+        <FooterSection />
+      </Box>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
