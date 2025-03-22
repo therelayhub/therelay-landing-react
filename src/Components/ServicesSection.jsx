@@ -1,33 +1,36 @@
 import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
-import image3 from "../assets/images/image-3.png";
+import image3 from "../assets/images/logoapps.png";
 
 const ServicesSection = () => {
   return (
-    <Stack
-      spacing={12}
-      alignItems="center"
+    <Box
       sx={{
-        width: "100%",
+        display: "flex",
+        flexDirection: "column",
         maxWidth: "1312px",
-        py: 20,
-        px: 8,
+        width: "100%",
+        alignItems: "center",
+        px: { xs: 3, sm: 6, md: 8 },
+        py: { xs: 8, md: 12 },
+        gap: { xs: 4, md: 8 },
         bgcolor: "background.default",
       }}
     >
       <Typography
         variant="h6"
         sx={{
-          fontSize: 48,
+          fontSize: { xs: 32, md: 48 },
           fontWeight: 600,
           color: "sand.2",
-          lineHeight: "64px",
+          lineHeight: { xs: "42px", md: "64px" },
+          textAlign: "center",
         }}
       >
         A new way to get work done
       </Typography>
 
-      <Stack spacing={6}>
+      <Stack spacing={6} width="100%">
         <Paper
           elevation={0}
           sx={{
@@ -37,8 +40,8 @@ const ServicesSection = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            py: 12,
-            px: 2,
+            py: { xs: 6, md: 12 },
+            px: { xs: 2, md: 4 },
             borderRadius: "15px",
             overflow: "hidden",
             backgroundImage:
@@ -51,38 +54,31 @@ const ServicesSection = () => {
             src={image3}
             alt="Image"
             sx={{
-              width: "1087px",
-              height: "252px",
-              position: "absolute",
+              width: "100%",
+              height: "auto",
               top: 0,
-              left: "81px",
-              zIndex: 1,
-              objectFit: "cover",
+              position: "absolute",
             }}
           />
 
           <Box
             sx={{
-              width: "760.7px",
-              pt: 44,
-              zIndex: 0,
+              width: { xs: "90%", md: "760.7px" },
+              pt: { xs: 30, md: 70 },
+              zIndex: 1,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              gap: 12,
+              gap: { xs: 6, md: 12 },
             }}
           >
             <Typography
               sx={{
-                width: "100%",
-                fontFamily: "'Inter-SemiBold', Helvetica",
                 fontWeight: 600,
                 color: "sand.2",
-                fontSize: "64px",
+                fontSize: { xs: 36, md: 64 },
                 textAlign: "center",
-                lineHeight: "64px",
-                textShadow: "0px 25px 50px -12px rgba(0,0,0,0.25)",
-                boxShadow: "0px 25px 50px -12px rgba(0,0,0,0.25)",
+                lineHeight: { xs: "44px", md: "64px" },
               }}
             >
               Make work great again
@@ -90,17 +86,15 @@ const ServicesSection = () => {
 
             <Typography
               sx={{
-                width: "693px",
-                fontFamily: "'Inter-Regular', Helvetica",
+                width: { xs: "90%", md: "693px" },
                 fontWeight: 400,
                 color: "sand.2",
-                fontSize: "20px",
+                fontSize: { xs: 16, md: 20 },
                 textAlign: "center",
-                lineHeight: "28px",
+                lineHeight: { xs: "24px", md: "28px" },
               }}
             >
-              Work shouldn't be about endless emails and repetitive admin.{" "}
-              <br />
+              Work shouldn't be about endless emails and repetitive admin.<br />
               With The Relay, you can easily chat with and coordinate tasks
               across all your apps. Take control, simplify and reclaim your time
               and brain power.
@@ -113,13 +107,13 @@ const ServicesSection = () => {
           sx={{
             width: "100%",
             maxWidth: "1312px",
-            height: "555px",
+            height: "auto",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            py: 12,
-            px: 2,
+            py: { xs: 6, md: 12 },
+            px: { xs: 2, md: 4 },
             borderRadius: "15px",
             overflow: "hidden",
             border: "none",
@@ -129,24 +123,20 @@ const ServicesSection = () => {
         >
           <Box
             sx={{
-              width: "760.7px",
+              width: { xs: "90%", md: "760.7px" },
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              gap: 12,
+              gap: { xs: 6, md: 12 },
             }}
           >
             <Typography
               sx={{
-                width: "100%",
-                fontFamily: "'Inter-SemiBold', Helvetica",
                 fontWeight: 600,
                 color: "sand.2",
-                fontSize: "64px",
+                fontSize: { xs: 36, md: 64 },
                 textAlign: "center",
-                lineHeight: "64px",
-                textShadow: "0px 25px 50px -12px rgba(0,0,0,0.25)",
-                boxShadow: "0px 25px 50px -12px rgba(0,0,0,0.25)",
+                lineHeight: { xs: "44px", md: "64px" },
               }}
             >
               Just say the word and it will be done
@@ -154,40 +144,29 @@ const ServicesSection = () => {
 
             <Typography
               sx={{
-                width: "693px",
-                fontFamily: "'Inter-Regular', Helvetica",
-                fontSize: "20px",
+                width: { xs: "90%", md: "693px" },
+                fontSize: { xs: 16, md: 20 },
                 textAlign: "center",
-                lineHeight: "28px",
+                lineHeight: { xs: "24px", md: "28px" },
               }}
             >
               <Box component="span" sx={{ color: "#eae8dd", fontWeight: 400 }}>
-                The Relay is powered by MCP (Model Context Protocol),
-                <br /> an open source, secure and standard connector between
-                apps that will allow you to command them with The Relay's
-                inbuilt agent called{" "}
+                The Relay is powered by MCP (Model Context Protocol), an open
+                source, secure and standard connector between apps that will
+                allow you to command them with The Relay's inbuilt agent called
               </Box>
-
-              <Box
-                component="span"
-                sx={{
-                  fontFamily: "'Inter-SemiBold', Helvetica",
-                  fontWeight: 600,
-                  color: "#f8f7f3",
-                }}
-              >
+              <Box component="span" sx={{ fontWeight: 600, color: "#f8f7f3" }}>
                 Spark
               </Box>
-
-              <Box component="span" sx={{ color: "#eae8dd" }}>
-                .{" "}
-              </Box>
+              .
             </Typography>
 
             <Button
               variant="contained"
+              onClick={() => window.open("https://forms.gle/vQESmoBzFmggXtQf9", "_blank")}
               sx={{
-                width: "300px",
+                width: "80%",
+                maxWidth: "300px",
                 height: "48px",
                 borderRadius: "8px",
                 background:
@@ -206,7 +185,7 @@ const ServicesSection = () => {
           </Box>
         </Paper>
       </Stack>
-    </Stack>
+    </Box>
   );
 };
 

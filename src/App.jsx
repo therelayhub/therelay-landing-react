@@ -6,8 +6,8 @@ import FooterSection from "./Components/FooterSection";
 import HeroSection from "./Components/HeroSection";
 import NavbarSection from "./Components/NavbarSection";
 import ServicesSection from "./Components/ServicesSection";
-import Box from "@mui/material";
-import ThemeProvider from "./ThemeProvider";
+import { Box } from "@mui/material";
+import { ThemeProvider } from "./ThemeProvider";
 
 const App = () => {
   return (

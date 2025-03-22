@@ -230,6 +230,15 @@ const appTheme = createTheme({
                 },
             },
         },
+        MuiGrid: {
+            styleOverrides: {
+              item: {
+                "&:first-child": {
+                  paddingLeft: 0,
+                },
+              },
+            },
+        },
     },
 });
 

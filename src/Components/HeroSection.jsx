@@ -1,6 +1,6 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
-import image4 from "../assets/images/image-4.png"; // Import the image
+import image4 from "../assets/images/heroimage.png"; // Import the image
 
 const HeroSection = () => {
   // Data for the hero section
@@ -16,73 +16,54 @@ const HeroSection = () => {
     <Box
       sx={{
         display: "flex",
-        maxWidth: "1312px",
-        height: "784px",
+        flexDirection: { xs: "column-reverse", md: "row" },
         alignItems: "center",
-        gap: 6,
-        pt: 5,
-        pr: 2,
-        pb: 5,
-        pl: 2,
+        justifyContent: "center",
+        maxWidth: "1312px",
         width: "100%",
+        minHeight: "100vh",
+        px: { xs: 3, sm: 6, md: 8 },
+        py: { xs: 8, md: 12 },
+        gap: { xs: 4, md: 8 },
         bgcolor: "background.default",
         position: "relative",
       }}
     >
-      <Box
-        component="img"
-        src={heroData.image}
-        alt="Phone displaying app interface"
-        sx={{
-          width: "609px",
-          height: "784px",
-          position: "absolute",
-          right: 0,
-          top: 0,
-          zIndex: 1,
-          objectFit: "cover",
-        }}
-      />
-
       <Stack
         spacing={3}
         sx={{
-          width: "667px",
-          position: "relative",
-          zIndex: 0,
+          maxWidth: { xs: "100%", md: "50%" },
+          textAlign: { xs: "center", md: "left" },
         }}
       >
-        <Stack spacing={2}>
-          <Typography
-            variant="h6"
-            sx={{
-              fontFamily: "'Inter-SemiBold', Helvetica",
-              fontWeight: 600,
-              color: "sand.2",
-              fontSize: "48px",
-              lineHeight: "72px",
-              textShadow: "0px 25px 50px -12px rgba(0,0,0,0.25)",
-              mt: -0.25,
-            }}
-          >
-            {heroData.title}
-          </Typography>
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: 600,
+            color: "sand.2",
+            fontSize: { xs: "32px", sm: "40px", md: "48px" },
+            lineHeight: { xs: "40px", sm: "56px", md: "72px" },
+          }}
+        >
+          {heroData.title}
+        </Typography>
 
-          <Typography
-            variant="subtitle1"
-            sx={{
-              width: "544px",
-              color: "text.secondary",
-            }}
-          >
-            {heroData.description}
-          </Typography>
-        </Stack>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            color: "text.secondary",
+            fontSize: { xs: "16px", sm: "18px" },
+            px: { xs: 2, md: 0 },
+          }}
+        >
+          {heroData.description}
+        </Typography>
 
         <Button
           variant="contained"
+          onClick={() => window.open("https://forms.gle/vQESmoBzFmggXtQf9", "_blank")}
           sx={{
-            width: "300px",
+            width: { xs: "100%", sm: "300px" },
             height: "48px",
             borderRadius: "8px",
             background:
@@ -99,6 +80,18 @@ const HeroSection = () => {
           {heroData.buttonText}
         </Button>
       </Stack>
+
+      <Box
+        component="img"
+        src={heroData.image}
+        alt="Phone displaying app interface"
+        sx={{
+          width: { xs: "90%", sm: "70%", md: "50%" },
+          maxWidth: "609px",
+          height: "auto",
+          objectFit: "contain",
+        }}
+      />
     </Box>
   );
 };
