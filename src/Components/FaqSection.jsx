@@ -55,7 +55,6 @@ const FaqSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: 6,
         px: { xs: 3, sm: 6, md: 8 },
         py: { xs: 8, md: 12 },
         gap: { xs: 4, md: 8 },

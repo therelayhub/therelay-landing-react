@@ -54,7 +54,6 @@ const FeaturesSection = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              maxWidth: "50%",
               gap: 2,
               flex: 1,
               alignSelf: "flex-end",
@@ -97,9 +96,17 @@ const FeaturesSection = () => {
         </Paper>
 
         {/* Bottom Feature Cards */}
-        <Grid container spacing={3} sx={{ width: "100%", margin: 0 }}>
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            width: "100%",
+            margin: 0,
+            flexDirection: { xs: "column", sm: "row" } // Ensures row layout on larger screens
+          }}
+        >
           {/* Left Card */}
-          <Grid item xs={12} sm={6} >
+          <Grid item xs={12} sm={6}>
             <Paper
               sx={{
                 display: "flex",
@@ -114,30 +121,19 @@ const FeaturesSection = () => {
                   "linear-gradient(270deg, rgba(72,68,52,0.2) 0%, rgba(173,165,127,0.5) 100%)",
               }}
             >
-              <Box
-                component="img"
-                src={chat}
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                }}
-              />
+              <Box component="img" src={chat} sx={{ width: "100%", height: "auto" }} />
               <Box sx={{ alignItems: "flex-start", gap: 2 }}>
                 <WorkIcon sx={{ width: 32, height: 32 }} />
                 <Typography
                   variant="subtitle1"
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: "24px",
-                    color: "text.primary",
-                  }}
+                  sx={{ fontWeight: 600, fontSize: "24px", color: "text.primary" }}
                 >
                   Your apps are ready to work for you
                 </Typography>
                 <Typography variant="body1" sx={{ color: "sand.2" }}>
                   Just give your requests, and watch as your apps work together
-                  intelligently to complete tasks. Say goodbye to manual labor
-                  and hello to effortless orchestration.
+                  intelligently to complete tasks. Say goodbye to manual labor and hello
+                  to effortless orchestration.
                 </Typography>
               </Box>
             </Paper>
@@ -162,20 +158,13 @@ const FeaturesSection = () => {
               <Box
                 component="img"
                 src={automations}
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                }}
+                sx={{ width: "100%", height: "auto" }}
               />
               <Box sx={{ alignItems: "flex-start", gap: 2 }}>
                 <AutomateIcon sx={{ width: 32, height: 32 }} />
                 <Typography
                   variant="subtitle1"
-                  sx={{
-                    fontWeight: 600,
-                    fontSize: "24px",
-                    color: "text.primary",
-                  }}
+                  sx={{ fontWeight: 600, fontSize: "24px", color: "text.primary" }}
                 >
                   Easy automation
                 </Typography>

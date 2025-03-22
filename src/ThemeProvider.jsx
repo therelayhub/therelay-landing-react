@@ -234,6 +234,10 @@ const appTheme = createTheme({
             styleOverrides: {
               item: {
                 "&:first-child": {
+                  paddingLeft: 3,
+                  paddingRight: 8,
+                },
+                "&:last-child": {
                   paddingLeft: 0,
                 },
               },
