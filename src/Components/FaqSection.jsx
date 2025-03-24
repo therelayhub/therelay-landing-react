@@ -55,9 +55,8 @@ const FaqSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        px: { xs: 3, sm: 6, md: 8 },
-        py: { xs: 8, md: 12 },
-        gap: { xs: 4, md: 8 },
+        px: { xs: 4, sm: 8, md: 10 },
+        py: { xs: 10, md: 16 }, // Increased bottom padding
         width: "100%",
         bgcolor: "background.default",
       }}
@@ -68,26 +67,26 @@ const FaqSection = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: 3,
+          gap: 5,
         }}
       >
         <Typography
           variant="h6"
           align="center"
           sx={{
-            fontSize: { xs: 32, md: 48 },
+            fontSize: { xs: 28, md: 42 }, // Slightly reduced text size
             fontWeight: 600,
             color: "sand.2",
-            lineHeight: { xs: "42px", md: "64px" },
+            lineHeight: { xs: "38px", md: "54px" },
             textAlign: "center",
-            mb: 10,
+            mb: 8,
           }}
         >
           Answers for the curious
         </Typography>
 
         <Box sx={{ width: "100%" }}>
-          {faqItems.map((item) => (
+          {faqItems.map((item, index) => (
             <Accordion
               key={item.id}
               expanded={expanded === `panel${item.id}`}
@@ -102,13 +101,18 @@ const FaqSection = () => {
                 "&:before": {
                   display: "none",
                 },
+                "&:last-of-type": {
+                  borderRadius: 0, // Removes the bottom curve effect
+                  boxShadow: "none", // Removes any shadow
+                },
                 "& .MuiAccordionSummary-root": {
-                  py: 1,
+                  py: 2.5,
                   minHeight: "auto",
                   "&.Mui-expanded": {
                     minHeight: "auto",
                   },
                 },
+                mb: 2,
               }}
             >
               <AccordionSummary
@@ -127,15 +131,18 @@ const FaqSection = () => {
                   sx={{
                     fontWeight: 500,
                     color: "text.primary",
-                    fontSize: "1rem",
-                    lineHeight: 1.5,
+                    fontSize: "0.95rem", // Slightly reduced question text size
+                    lineHeight: 1.6,
                   }}
                 >
                   {item.question}
                 </Typography>
               </AccordionSummary>
-              <AccordionDetails sx={{ px: 0, py: 1 }}>
-                <Typography variant="body2">
+              <AccordionDetails sx={{ px: 0, py: 1.5 }}>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "text.secondary", fontSize: "0.85rem" }} // Slightly reduced answer text size
+                >
                   {item.answer}
                 </Typography>
               </AccordionDetails>

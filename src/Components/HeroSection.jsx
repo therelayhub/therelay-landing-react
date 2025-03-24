@@ -23,7 +23,8 @@ const HeroSection = () => {
         width: "100%",
         minHeight: "100vh",
         px: { xs: 3, sm: 6, md: 8 },
-        py: { xs: 8, md: 12 },
+        pt: 2,  // Removes top padding
+        pb: { xs: 8, md: 12 },
         gap: { xs: 4, md: 8 },
         bgcolor: "background.default",
         position: "relative",
@@ -66,15 +67,15 @@ const HeroSection = () => {
             width: { xs: "100%", sm: "300px" },
             height: "48px",
             borderRadius: "8px",
-            background:
-              "linear-gradient(180deg, rgba(248,247,244,1) 0%, rgba(154,148,118,1) 100%)",
-            boxShadow: "0 0 10px rgba(255,255,255,0.2)",
-            color: "sand.7",
-            fontWeight: 600,
-            "&:hover": {
-              background:
-                "linear-gradient(180deg, rgba(248,247,244,0.9) 0%, rgba(154,148,118,0.9) 100%)",
-            },
+                background:
+                  "linear-gradient(180deg, rgba(248,247,244,1) 0%, rgba(154,148,118,1) 100%)",
+                color: "sand.7",
+                fontWeight: 600,
+                boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
+                "&:hover": {
+                  background:
+                    "linear-gradient(180deg, rgba(248,247,244,0.9) 0%, rgba(154,148,118,0.9) 100%)",
+                },
           }}
         >
           {heroData.buttonText}

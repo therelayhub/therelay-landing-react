@@ -27,15 +27,15 @@ const appTheme = createTheme({
             main: "rgba(41, 130, 103, 1)", // variable-collection-success-3
         },
         background: {
-            default: "rgba(9, 9, 11, 1)", // colors-zinc-950
-            paper: "rgba(22, 20, 13, 1)", // variable-collection-sand-7
+            default: "#09090B", // colors-zinc-950
+            paper: "#09090B", // variable-collection-sand-7
         },
         text: {
             primary: "rgba(235, 232, 222, 1)", // variable-collection-sand-2
             secondary: "rgba(214, 210, 188, 1)", // variable-collection-sand-3
             disabled: "rgba(113, 113, 122, 1)", // colors-zinc-500
         },
-        divider: "rgba(9, 9, 11, 0.1)", // colors-zinc-950-10
+        divider: "rgba(113, 113, 122, 1)", // colors-zinc-950-10
         // Custom colors from tailwind config
         sand: {
             1: "rgba(248, 247, 244, 1)",
@@ -232,15 +232,15 @@ const appTheme = createTheme({
         },
         MuiGrid: {
             styleOverrides: {
-              item: {
-                "&:first-child": {
-                  paddingLeft: 3,
-                  paddingRight: 8,
+                item: {
+                    "&:first-child": {
+                        paddingLeft: 3,
+                        paddingRight: 8,
+                    },
+                    "&:last-child": {
+                        paddingLeft: 0,
+                    },
                 },
-                "&:last-child": {
-                  paddingLeft: 0,
-                },
-              },
             },
         },
     },

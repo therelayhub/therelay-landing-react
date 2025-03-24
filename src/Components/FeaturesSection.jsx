@@ -1,11 +1,11 @@
-import AppsIcon from "@mui/icons-material/Apps";
-import AutomateIcon from "@mui/icons-material/AutoFixHigh";
-import WorkIcon from "@mui/icons-material/Work";
 import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import apps from "../assets/images/apps.png";
 import chat from "../assets/images/chat.png";
 import automations from "../assets/images/automations.png";
+import AppsIcon from "../assets/icons/AppsIcon.png";
+import AutomateIcon from "../assets/icons/AutomateIcon.png";
+import WorkIcon from "../assets/icons/WorkIcon.png";
 
 const FeaturesSection = () => {
   return (
@@ -59,7 +59,11 @@ const FeaturesSection = () => {
               alignSelf: "flex-end",
             }}
           >
-            <AppsIcon sx={{ width: 32, height: 32 }} />
+            <Box
+              component="img"
+              src={AppsIcon}
+              sx={{ width: 32, height: 32 }}
+            />
             <Typography
               variant="subtitle1"
               sx={{
@@ -123,7 +127,11 @@ const FeaturesSection = () => {
             >
               <Box component="img" src={chat} sx={{ width: "100%", height: "auto" }} />
               <Box sx={{ alignItems: "flex-start", gap: 2 }}>
-                <WorkIcon sx={{ width: 32, height: 32 }} />
+                <Box
+                  component="img"
+                  src={WorkIcon}
+                  sx={{ width: 32, height: 32 }}
+                />
                 <Typography
                   variant="subtitle1"
                   sx={{ fontWeight: 600, fontSize: "24px", color: "text.primary" }}
@@ -161,7 +169,11 @@ const FeaturesSection = () => {
                 sx={{ width: "100%", height: "auto" }}
               />
               <Box sx={{ alignItems: "flex-start", gap: 2 }}>
-                <AutomateIcon sx={{ width: 32, height: 32 }} />
+                <Box
+                  component="img"
+                  src={AutomateIcon}
+                  sx={{ width: 32, height: 32 }}
+                />
                 <Typography
                   variant="subtitle1"
                   sx={{ fontWeight: 600, fontSize: "24px", color: "text.primary" }}

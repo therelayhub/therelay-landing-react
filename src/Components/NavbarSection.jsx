@@ -21,12 +21,12 @@ const NavbarSection = () => {
         py: 3,
       }}
     >
-      <Stack direction="row" spacing={1} alignItems="center">
+      <Stack direction="row" spacing={5} alignItems="center">
         <Box sx={{ width: 36, height: 36, display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Box component="img" src={group1} alt="Logo" sx={{ width: 36, height: 32.03 }} />
+          <Box component="img" src={group1} alt="Logo" sx={{ width: 36, height: 36 }} />
         </Box>
 
-        <Stack direction={{ xs: "column", sm: "row" }} spacing={{ xs: 1, sm: 2 }}>
+        <Stack direction={{ xs: "column", sm: "row" }} spacing={{ xs: 1, sm: 10 }}>
           {navItems.map((item) => (
             <Box
               key={item.id}
@@ -53,15 +53,17 @@ const NavbarSection = () => {
         onClick={() => window.open("https://forms.gle/vQESmoBzFmggXtQf9", "_blank")}
         variant="contained"
         sx={{
-          height: 36,
+          height: "36px",
           px: 2,
-          borderRadius: 2,
-          background: "linear-gradient(180deg, rgba(248,247,244,1) 0%, rgba(154,148,118,1) 100%)",
+          borderRadius: "8px",
+          background:
+            "linear-gradient(180deg, rgba(248,247,244,1) 0%, rgba(154,148,118,1) 100%)",
           color: "sand.7",
-          boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.05)",
           fontWeight: 600,
+          boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
           "&:hover": {
-            background: "linear-gradient(180deg, rgba(248,247,244,0.9) 0%, rgba(154,148,118,0.9) 100%)",
+            background:
+              "linear-gradient(180deg, rgba(248,247,244,0.9) 0%, rgba(154,148,118,0.9) 100%)",
           },
         }}
       >
