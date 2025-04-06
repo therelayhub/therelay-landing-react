@@ -14,8 +14,8 @@ import FadeIn from "./FadeIn";
 const faqItems = [
   {
     id: 1,
-    question: "What apps can I connect to The Relay?",
-    answer: "You can connect over 50 of the most popular work apps to The Relay like G suite, Microsoft Office apps, Hubspot, Slack and Github.",
+    question: "What apps and databases can I connect to The Relay?",
+    answer: "You can connect over 50 of the most popular work apps to The Relay like G suite, Microsoft Office apps, Hubspot, Slack and Github along with enterprise databases like Postgres, MySQL and MongoDB securely.",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const faqItems = [
   {
     id: 4,
     question: "Is The Relay secure?",
-    answer: "The Relay uses an open source standard called MCP to connect with your apps. Furthermore all your chats are encrypted and only seen by you.",
+    answer: "The Relay uses an open source standard called MCP to connect with your apps. Furthermore all your chats and data are encrypted and only seen by you. We provide enterprise grade security and compliance.",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ const faqItems = [
   {
     id: 6,
     question: "Which platforms is The Relay on?",
-    answer: "The Relay will launch on iOS and Android.",
+    answer: "The Relay will launch on Web, Mac and Windows first.",
   },
 ];
 
