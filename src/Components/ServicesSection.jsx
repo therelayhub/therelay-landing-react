@@ -106,7 +106,7 @@ const ServicesSection = () => {
                 }}
               >
                 Work shouldn't be about endless searching and copy pasting data between apps.<br />
-                With The Relay, you can access the entirety of your organization's knowledge in a single space. Break the barriers between siloed apps and databases to perform tasks with ease.                and brain power.
+                With The Relay, you can access the entirety of your organization's knowledge in a single space. Break the barriers between siloed apps and databases to perform tasks with ease.
               </Typography>
             </Box>
           </Paper>
