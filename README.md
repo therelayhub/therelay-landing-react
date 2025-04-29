@@ -1,12 +1,34 @@
-# GitHub Codespaces ♥️ React
+# The Relay - Landing Page
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+A modern React landing page built with Vite, Material-UI, and React 18. This project serves as the landing page for The Relay platform.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Tech Stack
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+- React 18
+- Vite
+- Material-UI (MUI) v6
+- Emotion for styled components
+- Lucide React for icons
 
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+## Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone [repository-url]
+cd therelay-landing-react
+```
+
+2. Install dependencies
+```bash
+npm install
+```
 
 ## Available Scripts
 
@@ -14,57 +36,60 @@ In the project directory, you can run:
 
 ### `npm start`
 
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
-
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
+Runs the app in development mode.\
+Open [http://localhost:3000/](http://localhost:3000/) to view it in your browser.
 
 The page will reload automatically when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `dist` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run preview`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Previews the built app locally, useful for testing the production build before deployment.
+
+### `npm test`
+
+Launches the test runner (Vitest) in interactive watch mode.
+
+## Project Structure
+
+```
+therelay-landing-react/
+├── src/
+│   ├── assets/        # Static assets
+│   ├── Components/    # React components
+│   ├── hooks/        # Custom React hooks
+│   ├── styles/       # Global styles and theme
+│   ├── App.jsx       # Main App component
+│   ├── index.jsx     # Entry point
+│   └── ThemeProvider.jsx # MUI theme configuration
+├── public/           # Public static files
+└── dist/            # Production build output
+```
+
+## Development
+
+This project uses:
+- Vite for fast development and optimized builds
+- Material-UI for component library
+- Emotion for styled components
+- ESLint for code linting
+- Vitest for testing
+
+## Browser Support
+
+The project supports modern browsers including:
+- Latest versions of Chrome, Firefox, and Safari
+- Edge
+- Not optimized for Opera Mini
 
 ## Learn More
 
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
-
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
-
-### Advanced Configuration
-
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
-
-### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
-
-### Troubleshooting
-
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+- [Vite Documentation](https://vitejs.dev/guide/)
+- [React Documentation](https://reactjs.org/)
+- [Material-UI Documentation](https://mui.com/material-ui/)
+- [Vitest Documentation](https://vitest.dev/guide/)

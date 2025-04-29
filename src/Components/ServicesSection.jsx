@@ -2,6 +2,7 @@ import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 import React, { useReducer, useEffect } from "react";
 import image3 from "../assets/images/logoapps.png";
 import FadeIn from "./FadeIn";
+import { SPACING } from "../styles/spacing";
 
 const ServicesSection = () => {
   const [, forceUpdate] = useReducer(x => x + 1, 0);
@@ -19,9 +20,9 @@ const ServicesSection = () => {
         maxWidth: "1312px",
         width: "100%",
         alignItems: "center",
-        px: { xs: 3, sm: 6, md: 8 },
-        my: 20,
-        gap: { xs: 4, md: 8 },
+        my: SPACING.SECTION_MARGIN_Y,
+        px: SPACING.SECTION_PADDING_X,
+        gap: SPACING.SECTION_GAP,
         bgcolor: "background.default",
       }}
     >
@@ -51,8 +52,7 @@ const ServicesSection = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              py: { xs: 6, md: 12 },
-              px: { xs: 2, md: 4 },
+              p: 6,
               borderRadius: "15px",
               overflow: "hidden",
               backgroundImage:
@@ -87,10 +87,11 @@ const ServicesSection = () => {
                 sx={{
                   fontWeight: 600,
                   color: "sand.2",
-                  fontSize: { xs: 36, md: 64 },
+                  fontSize: { xs: 28, md: 40 },
                   textAlign: "center",
-                  lineHeight: { xs: "44px", md: "64px" },
+                  lineHeight: { xs: "36px", md: "48px" },
                 }}
+                variant="h2"
               >
                 Make work great again
               </Typography>
@@ -106,7 +107,7 @@ const ServicesSection = () => {
                 }}
               >
                 Work shouldn't be about endless searching and copy pasting data between apps.<br />
-                With The Relay, you can access the entirety of your organization's knowledge in a single space. Break the barriers between siloed apps and databases to perform tasks with ease.                and brain power.
+                With The Relay, you can access the entirety of your organization's knowledge in a single space. Break the barriers between siloed apps and databases to perform tasks with ease.
               </Typography>
             </Box>
           </Paper>
@@ -123,8 +124,7 @@ const ServicesSection = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              py: { xs: 6, md: 12 },
-              px: { xs: 2, md: 4 },
+              p: 6,
               borderRadius: "15px",
               overflow: "hidden",
               border: "none",
@@ -146,10 +146,11 @@ const ServicesSection = () => {
                 sx={{
                   fontWeight: 600,
                   color: "sand.2",
-                  fontSize: { xs: 36, md: 64 },
+                  fontSize: { xs: 28, md: 40 },
                   textAlign: "center",
-                  lineHeight: { xs: "44px", md: "64px" },
+                  lineHeight: { xs: "36px", md: "48px" },
                 }}
+                variant="h2"
               >
                 Just say the word and it will be done
               </Typography>

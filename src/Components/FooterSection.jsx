@@ -2,6 +2,7 @@ import { Box, Container, Grid, Link, Stack, Typography, Divider } from "@mui/mat
 import React, { useReducer, useEffect } from "react";
 import logo from "../assets/images/logo.png"; // Import the image
 import FadeIn from "./FadeIn";
+import { SPACING } from "../styles/spacing";
 
 const footerLinks = [
   {
@@ -105,8 +106,8 @@ const FooterSection = () => {
     <Box component="footer" sx={{ 
       width: "100%", 
       bgcolor: "background.default", 
-      px: 8, // Changed to 32px padding left and right (8 units * 4px)
-      my: 20,
+      px: SPACING.SECTION_PADDING_X,
+      my: SPACING.SECTION_MARGIN_Y,
     }}>
       <Container maxWidth="lg" disableGutters>
         {/* Footer Logo & Nav: Adjusted layout to align to top */}

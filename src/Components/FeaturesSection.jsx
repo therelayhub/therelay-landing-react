@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import React, { useReducer, useEffect } from "react";
 import apps from "../assets/images/apps.png";
 import chat from "../assets/images/chat.png";
@@ -7,6 +7,7 @@ import AppsIcon from "../assets/icons/AppsIcon.png";
 import AutomateIcon from "../assets/icons/AutomateIcon.png";
 import WorkIcon from "../assets/icons/WorkIcon.png";
 import FadeIn from "./FadeIn";
+import { SPACING } from "../styles/spacing";
 
 const FeaturesSection = () => {
   const [, forceUpdate] = useReducer(x => x + 1, 0);
@@ -24,9 +25,8 @@ const FeaturesSection = () => {
         maxWidth: "1312px",
         width: "100%",
         alignItems: "center",
-        px: { xs: 3, sm: 6, md: 8 },
-        py: { xs: 8, md: 12 },
-        gap: { xs: 4, md: 8 },
+        my: SPACING.SECTION_MARGIN_Y,
+        gap: SPACING.SECTION_GAP,
         bgcolor: "background.default",
       }}
     >
@@ -43,179 +43,158 @@ const FeaturesSection = () => {
         </Typography>
       </FadeIn>
 
-      <Stack spacing={4} width="100%">
-        {/* First Feature Card */}
-        <FadeIn>
-          <Paper
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column-reverse", md: "row" },
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-              gap: 6,
-              p: 6,
-              borderRadius: "12px",
-              overflow: "hidden",
-              backgroundImage:
-                "linear-gradient(270deg, rgba(72,68,52,0.2) 0%, rgba(173,165,127,0.5) 100%)",
-            }}
-          >
-            <Box
+      <Grid
+        container
+        spacing={3}
+        sx={{
+          width: '100%',
+        }}
+      >
+        {/* Top Card - Full Width */}
+        <Grid item xs={12}>
+          <FadeIn>
+            <Paper
               sx={{
                 display: "flex",
-                flexDirection: "column",
-                gap: 2,
-                flex: 1,
-                alignSelf: "flex-end",
+                flexDirection: { xs: "column-reverse", md: "row" },
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "100%",
+                gap: 6,
+                p: 6,
+                borderRadius: "12px",
+                overflow: "hidden",
+                backgroundImage:
+                  "linear-gradient(270deg, rgba(72,68,52,0.2) 0%, rgba(173,165,127,0.5) 100%)",
               }}
             >
               <Box
-                component="img"
-                src={AppsIcon}
-                sx={{ width: 32, height: 32 }}
-              />
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  fontWeight: 600,
-                  fontSize: "24px",
-                  color: "text.primary",
-                }}
-              >
-                A single hub to get work done at speed
-              </Typography>
-
-              <Stack spacing={2}>
-                <Typography variant="body1" sx={{ color: "#eae8dd" }}>
-                  Stop juggling apps and doing menial work over and over. With The
-                  Relay, chat directly with all your work apps in a unified space.
-                </Typography>
-
-                <Typography variant="body1" sx={{ color: "#eae8dd" }}>
-                  Ask questions, give instructions and automate tasks so you can focus on what matters.
-                  
-                </Typography>
-              </Stack>
-            </Box>
-
-            <Box
-              component="img"
-              src={apps}
-              sx={{
-                width: { xs: "100%", md: "50%" },
-                height: "auto",
-              }}
-            />
-          </Paper>
-        </FadeIn>
-
-        {/* Bottom Feature Cards */}
-        <Grid
-          container
-          spacing={4}
-          sx={{
-            width: "100%",
-            m: 0,
-            flexDirection: { xs: "column", sm: "row" },
-            alignItems: "stretch"
-          }}
-        >
-          {/* Left Card */}
-          <Grid 
-            item 
-            xs={12} 
-            sm={6}
-            sx={{ display: "flex" }}
-          >
-            <FadeIn delay={0.2} sx={{ width: "100%" }}>
-              <Paper
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "space-between",
-                  height: "100%",
-                  gap: 6,
-                  p: 6,
-                  borderRadius: "12px",
-                  overflow: "hidden",
-                  backgroundImage:
-                    "linear-gradient(270deg, rgba(72,68,52,0.2) 0%, rgba(173,165,127,0.5) 100%)",
-                  flex: 1
-                }}
-              >
-                <Box component="img" src={chat} sx={{ width: "100%", height: "auto", objectFit: "contain" }} />
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                  <Box
-                    component="img"
-                    src={WorkIcon}
-                    sx={{ width: 32, height: 32 }}
-                  />
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ fontWeight: 600, fontSize: "24px", color: "text.primary" }}
-                  >
-                    Your apps are ready to work for you
-                  </Typography>
-                  <Typography variant="body1" sx={{ color: "sand.2" }}>
-                    Just give your requests and watch as your apps work together
-                    intelligently to complete tasks with our AI agent. Say goodbye to manual labor and hello
-                    to effortless orchestration.
-                  </Typography>
-                </Box>
-              </Paper>
-            </FadeIn>
-          </Grid>
-
-          {/* Right Card */}
-          <Grid 
-            item 
-            xs={12} 
-            sm={6}
-            sx={{ display: "flex" }}
-          >
-            <FadeIn delay={0.4} sx={{ width: "100%" }}>
-              <Paper
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  height: "100%",
-                  gap: 6,
-                  p: 6,
-                  borderRadius: "12px",
-                  overflow: "hidden",
-                  backgroundImage:
-                    "linear-gradient(270deg, rgba(72,68,52,0.2) 0%, rgba(173,165,127,0.5) 100%)",
-                  flex: 1
+                  gap: 2,
+                  flex: 1,
                 }}
               >
                 <Box
                   component="img"
-                  src={automations}
-                  sx={{ width: "100%", height: "auto", objectFit: "contain" }}
+                  src={AppsIcon}
+                  sx={{ width: 32, height: 32 }}
                 />
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                  <Box
-                    component="img"
-                    src={AutomateIcon}
-                    sx={{ width: 32, height: 32 }}
-                  />
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ fontWeight: 600, fontSize: "24px", color: "text.primary" }}
-                  >
-                    Easy automation
-                  </Typography>
-                  <Typography variant="body1" sx={{ color: "sand.2" }}>
-                    Create repeatable tasks for the Agent to work on at a fixed time and earn your time back in your workday. Watch The Relay transform your work force to the next level of productivity.
-                  </Typography>
-                </Box>
-              </Paper>
-            </FadeIn>
-          </Grid>
+                <Typography
+                  variant="subtitle1"
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: "24px",
+                    color: "text.primary",
+                  }}
+                >
+                  A single hub to get work done at speed
+                </Typography>
+                <Typography variant="body1" sx={{ color: "#eae8dd" }}>
+                  Stop juggling apps and doing menial work over and over. With The
+                  Relay, chat directly with all your work apps in a unified space.
+                </Typography>
+                <Typography variant="body1" sx={{ color: "#eae8dd" }}>
+                  Ask questions, give instructions and automate tasks so you can focus on what matters.
+                </Typography>
+              </Box>
+              <Box
+                component="img"
+                src={apps}
+                sx={{
+                  width: { xs: "100%", md: "50%" },
+                  height: "auto",
+                }}
+              />
+            </Paper>
+          </FadeIn>
         </Grid>
-      </Stack>
+
+        {/* Bottom Left Card */}
+        <Grid item xs={12} sm={6}>
+          <FadeIn delay={0.2}>
+            <Paper
+              elevation={0}
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                p: 6,
+                gap: SPACING.CARD_GAP,
+                borderRadius: "15px",
+                overflow: "hidden",
+                backgroundImage:
+                  "linear-gradient(270deg, rgba(72,68,52,0.2) 0%, rgba(173,165,127,0.5) 100%)",
+              }}
+            >
+              <Box component="img" src={chat} sx={{ width: "100%", height: "auto", objectFit: "contain" }} />
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                <Box
+                  component="img"
+                  src={WorkIcon}
+                  sx={{ width: 32, height: 32 }}
+                />
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontWeight: 600, fontSize: "24px", color: "text.primary" }}
+                >
+                  Your apps are ready to work for you
+                </Typography>
+                <Typography variant="body1" sx={{ color: "sand.2" }}>
+                  Just give your requests and watch as your apps work together
+                  intelligently to complete tasks with our AI agent. Say goodbye to manual labor and hello
+                  to effortless orchestration.
+                </Typography>
+              </Box>
+            </Paper>
+          </FadeIn>
+        </Grid>
+
+        {/* Bottom Right Card */}
+        <Grid item xs={12} sm={6}>
+          <FadeIn delay={0.4}>
+            <Paper
+              elevation={0}
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                p: 6,
+                gap: SPACING.CARD_GAP,
+                borderRadius: "15px",
+                overflow: "hidden",
+                backgroundImage:
+                  "linear-gradient(270deg, rgba(72,68,52,0.2) 0%, rgba(173,165,127,0.5) 100%)",
+              }}
+            >
+              <Box
+                component="img"
+                src={automations}
+                sx={{ width: "100%", height: "auto", objectFit: "contain" }}
+              />
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                <Box
+                  component="img"
+                  src={AutomateIcon}
+                  sx={{ width: 32, height: 32 }}
+                />
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontWeight: 600, fontSize: "24px", color: "text.primary" }}
+                >
+                  Easy automation
+                </Typography>
+                <Typography variant="body1" sx={{ color: "sand.2" }}>
+                  Create repeatable tasks for the Agent to work on at a fixed time and earn your time back in your workday. Watch The Relay transform your work force to the next level of productivity.
+                </Typography>
+              </Box>
+            </Paper>
+          </FadeIn>
+        </Grid>
+      </Grid>
     </Box>
   );
 };

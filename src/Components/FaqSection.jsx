@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import React, { useState, useReducer, useEffect } from "react";
 import FadeIn from "./FadeIn";
+import { SPACING } from "../styles/spacing";
 
 const faqItems = [
   {
@@ -63,8 +64,8 @@ const FaqSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        px: { xs: 4, sm: 8, md: 10 },
-        my: 20, // Adding 80px margin top and bottom (20 units * 4px)
+        px: SPACING.SECTION_PADDING_X,
+        my: SPACING.SECTION_MARGIN_Y,
         width: "100%",
         bgcolor: "background.default",
       }}
