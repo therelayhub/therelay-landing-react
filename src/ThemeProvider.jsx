@@ -6,6 +6,16 @@ import {
 } from "@mui/material";
 import React, { useMemo, useEffect, useReducer } from "react";
 
+// Global spacing constants
+const SPACING = {
+    GRID: 6, // 24px
+    SECTION_GAP: { xs: 4, md: 8 }, // 16px -> 32px
+    SECTION_PADDING_X: { xs: 3, sm: 6, md: 8 }, // 12px -> 24px -> 32px
+    SECTION_MARGIN_Y: 20, // 80px
+    STACK_GAP: 3, // 12px
+    CARD_PADDING: 3, // 12px
+};
+
 const ThemeProvider = ({ children }) => {
     const [, forceUpdate] = useReducer(x => x + 1, 0);
     const currentTheme = useTheme();
@@ -238,16 +248,22 @@ const ThemeProvider = ({ children }) => {
                 },
             },
             MuiGrid: {
+                defaultProps: {
+                    spacing: SPACING.GRID,
+                },
                 styleOverrides: {
-                    item: {
-                        "&:first-child": {
-                            paddingLeft: 3,
-                            paddingRight: 8,
-                        },
-                        "&:last-child": {
-                            paddingLeft: 0,
-                        },
+                    container: {
+                        width: "100%",
+                        margin: 0,
                     },
+                    item: {
+                        display: "flex",
+                    },
+                },
+            },
+            MuiStack: {
+                defaultProps: {
+                    spacing: SPACING.STACK_GAP,
                 },
             },
         },

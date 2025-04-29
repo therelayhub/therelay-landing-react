@@ -1,6 +1,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { useReducer, useEffect } from "react";
 import image4 from "../assets/images/Hero updated.png"; // Import the image
+import { SPACING } from "../styles/spacing";
 
 const HeroSection = () => {
   const [, forceUpdate] = useReducer(x => x + 1, 0);
@@ -31,9 +32,9 @@ const HeroSection = () => {
         justifyContent: "center",
         maxWidth: "1312px",
         width: "100%",
-        px: { xs: 3, sm: 6, md: 8 },
-        my: 20,
-        gap: { xs: 4, md: 8 },
+        px: SPACING.SECTION_PADDING_X,
+        my: SPACING.SECTION_MARGIN_Y,
+        gap: SPACING.SECTION_GAP,
         bgcolor: "background.default",
         position: "relative",
       }}

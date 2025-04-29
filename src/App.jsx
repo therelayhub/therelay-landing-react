@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useReducer, useEffect } from "react";
 import FaqSection from "./Components/FaqSection";
 import FeaturesSection from "./Components/FeaturesSection";
@@ -6,6 +5,7 @@ import FooterSection from "./Components/FooterSection";
 import HeroSection from "./Components/HeroSection";
 import NavbarSection from "./Components/NavbarSection";
 import ServicesSection from "./Components/ServicesSection";
+import UseCaseSection from "./Components/UseCaseSection";
 import { Box } from "@mui/material";
 import ThemeProvider from "./ThemeProvider";
 
@@ -31,6 +31,7 @@ const App = () => {
         <NavbarSection forceUpdate={forceUpdate} />
         <HeroSection forceUpdate={forceUpdate} />
         <FeaturesSection forceUpdate={forceUpdate} />
+        <UseCaseSection forceUpdate={forceUpdate} />
         <ServicesSection forceUpdate={forceUpdate} />
         <FaqSection forceUpdate={forceUpdate} />
         <FooterSection forceUpdate={forceUpdate} />
