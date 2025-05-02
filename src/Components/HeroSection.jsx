@@ -13,9 +13,9 @@ const HeroSection = () => {
 
   // Data for the hero section
   const heroData = {
-    title: "Your command center to work across all your enterprise apps",
+    title: "Get work done across all your enterprise apps",
     description:
-      "Save upto 1.8 hours a day by connecting all your work apps together. Chat, automate, and get work done for you across siloed apps today",
+      "Stop wasting hours every day switching between apps, dashboards, and databases just to get simple tasks done. Get work done in The Relay, a unified space for all your work apps and databases.",
     buttonText: "Get Early Access",
     image: image4,
   };
@@ -29,25 +29,31 @@ const HeroSection = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         maxWidth: "1312px",
         width: "100%",
+        height: "100vh",
         px: SPACING.SECTION_PADDING_X,
         my: SPACING.SECTION_MARGIN_Y,
         gap: SPACING.SECTION_GAP,
         bgcolor: "background.default",
         position: "relative",
+        pt: { xs: 4, md: 6 },
       }}
     >
       <Box
         component="img"
         src={heroData.image}
-        alt="Phone displaying app interface"
+        alt="Browser displaying app interface"
         key={Date.now()}
         sx={{
           width: "100%",
           maxWidth: "1200px",
           height: "auto",
+          maxHeight: {
+            xs: "45vh",
+            md: "60vh"
+          },
           objectFit: "contain",
           mb: 10
         }}
@@ -77,13 +83,13 @@ const HeroSection = () => {
         <Typography
           variant="subtitle1"
           sx={{
-            color: "text.secondary",
+            color: "grey.2",
             fontSize: { xs: "16px", sm: "18px" },
             px: { xs: 2, md: 0 },
             fontWeight: 400,
             lineHeight: { xs: "24px", sm: "28px" },
             letterSpacing: "0.15px",
-            mt: 2,
+            mt: 4,
             textAlign: "center"
           }}
         >
@@ -97,7 +103,7 @@ const HeroSection = () => {
             width: { xs: "100%", sm: "300px" },
             height: "48px",
             borderRadius: "8px",
-            mt: 6,
+            mt: 12,
             background:
               "linear-gradient(180deg, rgba(248,247,244,1) 0%, rgba(154,148,118,1) 100%)",
             color: "sand.7",

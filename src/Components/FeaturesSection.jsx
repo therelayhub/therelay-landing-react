@@ -92,11 +92,7 @@ const FeaturesSection = () => {
                   A single hub to get work done at speed
                 </Typography>
                 <Typography variant="body1" sx={{ color: "#eae8dd" }}>
-                  Stop juggling apps and doing menial work over and over. With The
-                  Relay, chat directly with all your work apps in a unified space.
-                </Typography>
-                <Typography variant="body1" sx={{ color: "#eae8dd" }}>
-                  Ask questions, give instructions and automate tasks so you can focus on what matters.
+                The Relay lets ops, finance, and internal teams chat with their entire stack CRM, chat, docs, email clients and internal databases and tell the apps what to do and they perform that task for you
                 </Typography>
               </Box>
               <Box
